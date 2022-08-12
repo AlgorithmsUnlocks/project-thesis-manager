@@ -1,0 +1,20 @@
+/* Profile Area CSS */
+.profile-card {
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    background: white;
+    padding: 25px;
+}
+.profile-image,.profile-name {
+    text-align: center;
+}
+.profile-name{
+    padding: 15px;    
+}
+.container-fluid.student-profile-area{
+    padding: 240px 0;
+    background-image: url(../src/images/login-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: -23px 0;
+}

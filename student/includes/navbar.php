@@ -1,4 +1,12 @@
- 
+<?php 
+include '../Database/config.php';
+
+    $student_id = $_SESSION['st_id'];
+    $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$student_id'") or die('query failed');
+     if(mysqli_num_rows($query) > 0){
+        $fetch = mysqli_fetch_assoc($query);
+    }
+?>
 
         <!-- Sidebar -->
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" >
@@ -28,7 +36,7 @@
             <div class="sidebar-heading">
                 Leading University
             </div>
-
+             
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -185,7 +193,16 @@
                             </div>
                         </div>
                     </form>
-                    <h4 class='nav-link'><?php echo "Year : <script>document.write(new Date().getFullYear()); </script>" ?></h4>
+                    <h4 class='nav-link'>
+                        <?php echo "<script>
+                        var today = new Date();
+                        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                        var  time = today.getHours()+ ':' + today.getMinutes() + ':' + today.getSeconds();
+                        var dateTime ='Date / Time : '+ date + ' / ' +time;
+                        document.write(dateTime);
+                        </script>" ?>
+                    </h4>
+                    
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -340,11 +357,10 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                    <?php 
-                                            echo $_SESSION['st_id'] ?>
+                                <?php echo $fetch['name']; ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
+                                    src='<?php echo $fetch['profile'] ?>'>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

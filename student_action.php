@@ -115,7 +115,7 @@ if(isset($_POST['login_student'])){
             header('Location: student/index.php');
 
         }else{
-            $_SESSION['login_error'] = "Password and Confirm password not matched";
+            $_SESSION['login_error'] = "Student id and password is not match our server";
             header('Location: student_login.php'); 
         }
 

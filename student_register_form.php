@@ -85,7 +85,7 @@
                       <div class="form-group">
                       <select name="student_department" class='form-control'>
                         <option value="">Choose Your Department</option>
-                        <option value="CSE"> CSE </option>
+                        <option value="Computer Science and Engineering"> CSE </option>
                         <option value="EEE">EEE</option>
                         <option value="Civil">Civil</option>
                         <option value="BBA">BBA</option>
