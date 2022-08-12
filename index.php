@@ -8,110 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Project Thesis Manager</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title> University Project Thesis Manager</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register_page.css">
   </head>
   <body>
-    
-     <div class="container-fluid">
-      <div class="container registration-form">
-        <div class="row">
 
-          <div class="col-md-12">
-              <div class="form-info text-center">
-                <h3>Create An Account</h3>
-                <p>Create an account to enjoy all the services of <br/>Leading University</p>
-              </div>
-              <form action="user-register.php" method="post">
-                  <div class="register-form">
-                      <div class="form-group">
-
-                        <input type="text" class='form-control' name='user_name' placeholder='User Name' require>
-                      </div>
-                      <div class="form-group">
-                    
-                        <input type="email" class='form-control' name='user_email' placeholder='Email Address' require>
-                      </div>
-                      <div class="form-group">
-                    
-                        <input type="text" class='form-control' name='user_phone' placeholder='Phone Number' require>
-                      </div>
-                      <div class="form-group">
-                      
-                        <input type="text" class='form-control' name='user_batch' placeholder='Your Batch' require>
-                      </div>
-                      <div class="form-group">
-                      
-                        <input type="text" class='form-control' name='user_section' placeholder='Your Sections' require>
-                      </div>
-                      <div class="form-group">
-                      <select name="session" class='form-control'>
-                        <option value="">Choose Your Session</option>
-                        <option value="spring">Spring 2019-2022</option>
-                        <option value="summer">Summer 2019-2022</option>
-                        <option value="fall">Fall 2019-2022</option>
-                        <option value="winter">Winter 2019-2022</option>
-                        <option value="spring">Spring 2019-2022</option>
-                        <option value="summer">Summer 2019-2022</option>
-                        <option value="fall">Fall 2019-2022</option>
-                        <option value="winter">Winter 2019-2022</option>
-                      </select>
-                        
-                      </div>
-                      <div class="form-group">
-                      <select name="semester" class='form-control'>
-                        <option value="">Choose Your Current Semester</option>
-                        <option value="spring">Spring 2022</option>
-                        <option value="summer">Summer 2022</option>
-                        <option value="fall">Fall 2022</option>
-                        <option value="winter">Winter 2022</option>
-                        <option value="spring">Spring 2022</option>
-                        <option value="summer">Summer 2022</option>
-                        <option value="fall">Fall 2022</option>
-                        <option value="winter">Winter 2022</option>
-                        <option value="spring">Spring 2022</option>
-                        <option value="summer">Summer 2022</option>
-                        <option value="fall">Fall 2022</option>
-                        <option value="winter">Winter 2022</option>
-                        <option value="spring">Spring 2022</option>
-                        <option value="summer">Summer 2022</option>
-                        <option value="fall">Fall 2022</option>
-                        <option value="winter">Winter 2022</option>
-                      </select>
-                        
-                      </div>
-                      
-                      <div class="form-group col">
-                          <label for="user-avater">Upload Your Profile Picture</label> &#123;
-                          <input type="file" class='form-controls-file' name='user_avater' require>&#125;
-                      </div>
-                      <div class="form-group col">
-                          <label for="user-idcard">Upload Your Student ID Card</label> &#123;
-                          <input type="file" class='form-controls-file' name='user_id_card' require>&#125;
-                      </div>
-                  
-                      
-                      <div class="form-group">               
-                        <input type="password" class='form-control' name='user_password' placeholder='Password' require>
-                      </div>
-                      <div class="form-group">
-                        <input type="text" class='form-control' name='user_cfpassword'  placeholder='Confirm Password' require>
-                      </div>
-                      <div class="submit-regiter text-center">
-                        <button type='submit' name='submit' id='register-btn'>Create Account</button>
-                        <p>Already Have An Account? <a href='user-login.php'>Sign In</a></p>
-                      </div> 
-                    </div>
-
-              </form>
-              
-          </div>
-          
-        </div>
-      </div>
-     </div>
-
+  <h3 class="text-center p-5"><a href="student_register_form.php">Student Register</a></h3>
+ 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
