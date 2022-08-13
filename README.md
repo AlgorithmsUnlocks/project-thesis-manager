@@ -1,4 +1,4 @@
-# project-thesis-manager
+# Leadin University Management System (LUMS)
 
 Author : Ruman Ahmed & Sazia Akter Epti 
 Student of Leading University
