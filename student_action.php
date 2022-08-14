@@ -126,4 +126,45 @@ if(isset($_POST['login_student'])){
 
 }
 
+
+// Student Profile Data Update
+
+if(isset($_POST['update_student'])){
+
+    $student_id = $_SESSION['st_id'];
+    $student_name = $_POST['student_name'];
+    $student_email = $_POST['student_email'];
+    $student_phone = $_POST['student_phone'];
+    $student_id = $_POST['student_id'];
+    $student_department = $_POST['student_department'];
+    $student_dob = $_POST['student_dob'];
+    $student_password = $_POST['student_password'];
+    $student_cfpassword = $_POST['student_cfpassword'];
+    $student_avater = $_FILES['student_avater'];
+
+
+    $imageLocation = $_FILES['student_avater']['tmp_name'];
+    $imageName = $_FILES['student_avater']['name'];
+    $image_des = "upload/".$imageName;
+
+    $query = "UPDATE `student_panel` SET `name`='$student_name',`email`='$student_email',`phone`='$student_phone',`st_id`='$student_id',`department`='$student_department',`dob`='$student_dob',`password`='$student_password',`profile`='$image_des' WHERE `st_id` = '$student_id'";
+
+    $query_run = mysqli_query($db_conn, $query);
+
+    if($query_run){
+
+        move_uploaded_file($imageLocation,$image_des);
+
+        $_SESSION['success'] = "Profile data is updated";
+        header('Location: student/student_profile.php');
+    }
+    else{
+        $_SESSION['success'] = " Profile data is not updated";
+        header('Location: student/student_profile.php');
+    }
+
+}
+ 
+
+
 ?>

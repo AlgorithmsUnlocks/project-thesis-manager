@@ -16,6 +16,16 @@
 
  <script>
 
+    var preloader = document.getElementById("site-loader");
+    function myFunction(){
+        preloader.style.display = "none";
+    }
+
+ </script>
+
+
+ <script>
+
     $(document).ready(function () {
         $('#datatablesapi').DataTable({
             "pagingType" : "full_numbers",

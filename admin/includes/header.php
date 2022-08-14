@@ -24,11 +24,26 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        #site-loader{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        background: #fff url('../src/icons/Ripple-loader.gif') no-repeat center;
+        z-index: 99999;
+    }
+    </style>
     
 
 </head>
 
-<body id="page-top">
+<body id="page-top"  onload="myFunction()">
+
+<div id="site-loader">
+
+</div>
 
     <!-- Page Wrapper -->
     <div id="wrapper">

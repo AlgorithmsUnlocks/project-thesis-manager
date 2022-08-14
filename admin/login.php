@@ -55,6 +55,15 @@ include ('includes/header.php');
 
     </div>
 
+    <script>
+
+        var preloader = document.getElementById("site-loader");
+        function myFunction(){
+            preloader.style.display = "none";
+        }
+
+</script>
+
 <?php 
 include ('includes/script.php');
 ?>

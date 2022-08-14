@@ -21,35 +21,69 @@ $query = mysqli_query($db_conn,"SELECT * FROM `student_panel` WHERE `st_id` = '$
             <div class="col-md-8 m-auto">
                 <div class="profile-card">
                     <div class="profile-card-inner">
+                        <div class="error-message">
+                        <?php 
+                                if(isset($_SESSION['success']) && $_SESSION['success'] !=''){
+                                    echo '<h4 class="text-center admin-error">'. $_SESSION['success'].'</h4>';
+                                    unset($_SESSION['success']);
+                                
+                                }
+                        ?>
+                        </div>
                         <div class="profile-image">
                            
-                            <img src="<?php echo $fetch['profile'] ?>" alt="Profile">
+                            <img src="../<?php echo $fetch['profile'] ?>" alt="Profile">
                         </div>
                         <div class="profile-name">
                             <h4><?php echo $fetch['name']; ?></h4>
                         </div>
                         <div class="profile-info">
                             <div class="row">
-                                <div class="col-md-6 m-auto">
+                                <div class="col-md-5 m-auto">
                                     <h5>Email Address  </h5>
+                                    <hr class="left-hr">
                                     <h5>Phone Number  </h5>
+                                    <hr class="left-hr">
                                     <h5>Student ID No.  </h5>
+                                    <hr class="left-hr">
                                     <h5>Department </h5>
+                                    <hr class="left-hr">
                                     <h5>Date of Birth </h5>
+                                    <hr class="left-hr">
                                     <h5>Password  </h5>
+                                    <hr class="left-hr">
+                                    <h5>Account Creation Date  </h5>
+                                    <hr class="left-hr">
                                    
                                      
                                 </div>
-                                <div class="col-md-6 m-auto">
+                                <div class="col-md-7 m-auto">
                                     <h5><?php echo ": ".$fetch['email']; ?></h5>
+                                    <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['phone']; ?></h5>
+                                    <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['st_id']; ?></h5>
+                                    <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['department']; ?></h5>
+                                    <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['dob']; ?></h5>
+                                    <hr class="left-hr">
                                     <h5><?php echo ": ".$fetch['password']; ?></h5>
-                                    
+                                    <hr class="left-hr">
+                                    <h5><?php echo ": ".$fetch['create_date']; ?></h5>
+                                    <hr class="left-hr">
                                     
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 m-auto text-center">
+                                    <form action="student_profile_edit.php" method="post">
+                                        <input type="hidden" name="edit_id" value="<?php echo $fetch['id']; ?>">
+                                        <button type="submit" class="btn btn-warning text-white" name='edit_btn'> Update Profile</button> 
+                                    </form>
+                                </div>
+
+                                
                             </div>
                         </div>
                     </div>

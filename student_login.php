@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register_page.css">
+    <link rel="stylesheet" href="css/index.css">
 
     <style>
       .status_message {
@@ -49,7 +50,10 @@
 }
     </style>
   </head>
-  <body>
+  <body onload="myFunction()">
+  <div id="site-loader">
+     
+  </div>
     
      <div class="container-fluid">
       <div class="row justify-content-center">
@@ -113,6 +117,15 @@
       
 
      </div>
+
+     <script>
+
+var preloader = document.getElementById("site-loader");
+function myFunction(){
+  preloader.style.display = "none";
+}
+
+</script>
 
 
     <!-- Optional JavaScript -->

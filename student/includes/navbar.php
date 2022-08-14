@@ -360,7 +360,7 @@ include '../Database/config.php';
                                 <?php echo $fetch['name']; ?>
                                 </span>
                                 <img class="img-profile rounded-circle"
-                                    src='<?php echo $fetch['profile'] ?>'>
+                                    src='../<?php echo $fetch['profile'] ?>'>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

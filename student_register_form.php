@@ -14,6 +14,7 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/register_page.css">
+    <link rel="stylesheet" href="css/index.css">
     <style>
       .empty_message {
         font-size: 20px;
@@ -38,9 +39,14 @@
     box-shadow: 0px 1px 8px 3px #17a2b814;
     margin: 10px 0;
 }
+ 
     </style>
   </head>
-  <body>
+  <body onload="myFunction()">
+
+  <div id="site-loader">
+     
+  </div>
     
      <div class="container-fluid">
       <div class="row justify-content-center">
@@ -128,6 +134,16 @@
       
 
      </div>
+
+     <script>
+
+        var preloader = document.getElementById("site-loader");
+        function myFunction(){
+          preloader.style.display = "none";
+        }
+ 
+      </script>
+
 
 
     <!-- Optional JavaScript -->
